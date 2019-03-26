@@ -1,0 +1,75 @@
+.menu ul {
+
+                               display: flex;
+
+                               padding: 0;
+
+                               margin: 0;
+
+                               list-style: none;
+
+                }
+
+.menu a {
+
+                               display: block;
+
+                               padding: 0.5em;
+
+                               background-color: #F9B53C;
+
+                               text-decoration: none;
+
+                               color: #191C26;
+
+                }
+
+.menu a:hover {
+
+                               background-color: #CC673B;
+
+                }
+
+.menu ul li ul {
+
+                               display: none;
+
+                }
+
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+
+                               display: block;
+
+                }
+body, html { height:100%;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:silver;
+	}
+ 
+#uno{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	margin:auto;
+	height:49.5%;
+	background-color:blue;
+	}
+#dos{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	background-color:green;
+	}
+#tres{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	background-color:yellow;
+	}
+#cuatro{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	background-color:red;
+	}
