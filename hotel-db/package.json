@@ -1,0 +1,26 @@
+{
+  "name": "hotel-db",
+  "version": "1.0.0",
+  "description": "A Simple Connector of Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spuertogarauniminuto/ing-software201910.git"
+  },
+  "author": "Alexis Holguin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spuertogarauniminuto/ing-software201910/issues"
+  },
+  "homepage": "https://github.com/spuertogarauniminuto/ing-software201910#readme",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
