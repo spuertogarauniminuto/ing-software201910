@@ -41,7 +41,15 @@ Este es el servidor de la aplicación web del hotel. Con este se define el backe
 
 ## Uso
 
-Abrir una consola dentro de la carpeta hotel-server contaran con las siguientes funcionalidades:
+Abrir una consola dentro de la carpeta hotel-server.
+
+**Antes de correr cualquier comando**
+
+```shell
+    npm install
+```
+
+Contaran con las siguientes funcionalidades:
 
 - ```shell
     npm run start
