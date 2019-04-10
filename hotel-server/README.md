@@ -34,8 +34,8 @@ Este es el servidor de la aplicación web del hotel. Con este se define el backe
 <div id='dependencias' />
 
 ## Dependecias
-
-1. [express](https://expressjs.com/es/) como principal, ella nos permite desplegar de manera sencilla el servidor
+1. **importante tener instalado [node.js](https://nodejs.org/es/download/) y gestor de paquetes [npm](https://www.npmjs.com/)**
+2. [express](https://expressjs.com/es/) como principal, ella nos permite desplegar de manera sencilla el servidor
 
 <div id='uso' />
 
