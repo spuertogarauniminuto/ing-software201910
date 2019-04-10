@@ -66,3 +66,6 @@ Contaran con las siguientes funcionalidades:
     npm run lint -- --fix
     //con formateran el codigo al estandard ECMAScript 2016
     ```
+
+Despues de ejecutar el server dirigirse a la siguiente direccion:
+- [localhost](http://localhost:3000)
