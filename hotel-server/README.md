@@ -64,7 +64,7 @@ Contaran con las siguientes funcionalidades:
 
 - ```shell
     npm run lint -- --fix
-    //con formateran el codigo al estandard ECMAScript 2016
+    //con esto formatearan el codigo al estandard ECMAScript 2016
     ```
 
 Despues de ejecutar el server dirigirse a la siguiente direccion:
