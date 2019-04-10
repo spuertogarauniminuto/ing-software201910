@@ -18,6 +18,10 @@ router.get('/req3', (req, res) => {
   res.render('pages/req4')
 })
 
+router.get('/req4', (req, res) => {
+  res.render('pages/req4')
+})
+
 router.get('/req5', (req, res) => {
   res.render('pages/req5')
 })
