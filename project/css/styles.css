@@ -1,4 +1,3 @@
-
 .cabecera-principal {
   background: #000428;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
@@ -7,6 +6,7 @@
 
 .navbar{
   box-shadow: 2px 2px 5px #000;
+
 }
 
 .cabeceraAzul{
@@ -14,3 +14,5 @@
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
   background: linear-gradient(to right, #2F80ED, #56CCF2);
 }
+
+

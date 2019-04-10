@@ -1,0 +1,16 @@
+body{
+	
+	background-image: radial-gradient(circle, #00416a, #00416a, #00416a, #00416a, #00416a);
+	/*background-image: linear-gradient(90deg,#ff0844 0,#ffb199);*/
+ 
+}
+#tabla{
+	
+	box-shadow: 0 0 100px #000069; 
+	margin: 10px auto;
+	width: 1600px;
+	height:1000px;
+	margin: 10px auto;
+    padding: 20px;
+	
+}
