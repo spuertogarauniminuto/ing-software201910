@@ -1,0 +1,136 @@
+html{
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+body{
+	background-color: #9AD1ED;
+}
+
+.cabecera-principal {
+  background: #000428;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px #000;
+}
+
+/* footer de la pagina*/
+footer {
+  align-self: flex-end;
+  font-family: cursive;
+  line-height: 6;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background: #008B8B;
+	overflow: hidden;
+}
+
+li{
+	float: left;
+
+}
+
+li a{
+	display: block;
+	color: white;
+	text-align: left;
+	padding: 16px 16px;
+	text-decoration: none;
+	border-right: 1px solid navy;
+}
+
+li a:visited{
+	color: #AFEEEE;
+}
+.cabeceraAzul{
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
+li a:hover{
+	background-color: #B0C4DE;
+	color: #A52A2A;
+}
+.container{
+	max-width: 450px;
+	height: auto;
+	background-color: #EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+}
+
+.form_top{
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem #F39B53;
+	margin-bottom: 1rem;
+}
+
+.form_top h2{
+	font-weight: bold;
+	color: #F39B53;
+	font-size: 18px;
+}
+
+h2 span{
+	color: #F39B53;
+}
+
+.form_reg {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn_form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn_submit, .btn_reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input: focus{
+	border-bottom: solid #F39B53 .2rem;
+}
+
+.btn_submit, .btn_reset{
+	width: 40%;
+	border-bottom: none;
+	background-color: #31B1E5;
+	color: white;
+}
+
+.btn_reset{
+	background-color: #EDA135;
+}
+
+.btn_submit:hover{
+	background-color: #4C9ED9;
+}
+
+.btn_reset:hover{
+	background-color: #FA9535;
+}
