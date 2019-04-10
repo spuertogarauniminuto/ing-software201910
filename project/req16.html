@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html>
+<head>
+<meta charset="utf-8">
+<link href="Style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title></title>
-  </head>
-  <body>
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+	<title>mostrar datos</title>
+</head>
+<body>
 
-  </body>
+<nav class="navbar navbar-expand-lg  d-flex justify-content-center">
+  <div class="btn-group">
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req1</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req2</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req3</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req4</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req5</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req6</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req7</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req8</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req9</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req10</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req11</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req12</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req13</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req14</a>
+  <a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req15</a>
+  <div class="btn-group"><a class="btn btn-outline-secondary btn-lg btn-block" href="Tabla.php">req16</a></div>
+  
+    
+  </div>
+	</nav>
+	<br>
+	<div id="tabla">
+		<br>
+	<div id= "NewTable1">
+	<div class="alert alert-warning text-center" role="alert"><!-- Alerta -->
+			Tabla completa
+		</div>
+		
+		
+		
+	<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Habitacion</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Hora Entrada</th>
+	  <th scope="col">Hora Salida</th>
+	  <th scope="col">Cobro</th>
+    </tr>
+  </thead>
+	<tbody>
+		<tr>
+			<td><?php echo $mostrar['nombres'] ?></td>
+			<td><?php echo $mostrar['apellidos'] ?></td>
+			<td><?php echo $mostrar['codigo'] ?></td>
+			<td><?php echo $mostrar['NMes'] ?></td>
+			<td><?php echo $mostrar['Vendido'] ?></td>
+			<td>
+			<td>
+			
+		</tr>
+	 </tbody>
+	</table>
+	</div>
+	
+	</br></br>
+	</div>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
 </html>
