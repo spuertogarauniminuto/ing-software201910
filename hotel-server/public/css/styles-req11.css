@@ -1,7 +1,8 @@
-body{
+body {
     background-image: linear-gradient(to top, #f00d0d, #ef6400, #e29700, #cbc300, #a8eb12);
 }
-.prices{
+
+.prices {
     min-width: 300px;
     max-width: 650px;
     margin-bottom: 30px;
