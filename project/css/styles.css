@@ -6,4 +6,13 @@
 
 .navbar{
   box-shadow: 2px 2px 5px #000;
+
 }
+
+.cabeceraAzul{
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
+
