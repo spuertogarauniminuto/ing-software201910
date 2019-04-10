@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  	/*background: #E1E1DF;*/
+  	display: flex;
+  	min-height: 100vh;
+  	flex-wrap: wrap;
+}
+
+header{
+	width: 100%;
+}
+
+.wrapper{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+#logo{
+	width: 200px;
+	height: 200px;
+	border: 0px solid #000;
+	float: left;
+}
+
+.navegacion{
+	float: center;
+	padding: 0px;
+	width: 1000px;
+	margin: 30px auto;
+	background: black;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	font-size: 30px;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu de los requerimientos*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 68%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 5.5px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+/* Fin submenu de los requerimientos*/
+
+#categorias{
+	width: 100%;
+	height: auto; overflow: hidden;
+	margin-top: -80px;
+	/*background: white;*/
+}
+
+.uno{
+	width: 1500px;
+	height: auto; overflow: hidden;
+	float: left;
+	padding: 5px;
+	text-align: center;
+	color: #4682b4;
+	background:#F8F9D2;
+	margin-left: 172px;
+	margin-right: 172px; 
+}
+
+/*Imgen*/
+.uno .imagen:hover{
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	box-shadow: 0px 0px 15px 15px #ec731e;
+	-webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transition: all .5s;
+}
+
+/*titulo*/
+.uno h3{
+	color: #641E16 ;
+	font-family: 'Open sans'; 
+	font-size: 35px;
+}
+
+/*texto despues del titulo*/
+.uno p{
+	font-family:  Vegur, 'PT Sans', Verdana, sans-serif;
+	font-size: 20px;
+	float: center
+}
+
+.parrafo{
+	color: #707070;
+	text-align: justify;
+}
+
+/*Estilos para botones:*/
+.leer-mas{
+	text-decoration:none;
+	border: none;
+	font-size: 19px;
+	color: #ffffff;
+	background: -webkit-linear-gradient(top, #e1400a, #b83309);
+	background: -moz-linear-gradient(top, #e1400a, #b83309);
+	background: linear-gradient(top, #e1400a, #b83309);
+	padding: 15px;
+	cursor: pointer;
+	text-shadow: 3px 3px 3px 3px #000000;
+	box-shadow: 3px 5px 7px #000000;
+	border-radius: 5px;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.leer-mas:hover{
+	background: #006699;
+	color: #fff;
+	transition: background 1s, color 1s;
+}
+/*Fin estilos para botones*/
+
+
+/* footer de la pagina*/
+footer{
+	align-self: flex-end;
+	background: black;
+	font-family: cursive;
+	line-height: 6;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	width: 100%; 
+}
+
+/*Pagina de reservas*/
+#categoria{
+	width: 100%;
+	height: auto; overflow: hidden;
+	margin-top: -150px;
+}
+
+#categoria h3{
+	color:black;
+	font-family: 'Open sans'; 
+	font-size: 35px;
+}
