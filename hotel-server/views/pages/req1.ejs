@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Custom CSS -->
 
-    <title>Software Hotel</title>
+    <title>Hab disponibles </title>
   </head>
   <body>
 
     <!--Navegación-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href=" ">Software Hotel</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <a class="navbar-brand" href="index.html">Software Hotel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,38 +64,56 @@
 
     <!-- Cabecera -->
     <header class="cabecera-principal">
-      <div class="background text-white py-5">
+
+      <div class="background text-white py-5 cabeceraAzul">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 text-center">
-              <h1>Proyecto Ingeniería de Software</h1>
+            <div class="col">
 
-              <p>El proyecto se basa en la creación de una página web que permite
-              realizar diferentes procesos dentro de un hotel, teniendo en cuenta
-              el siguiente enunciado: El dueño de un hotel hotel le pide a usted
-              desarrollar un programa sobre las habitaciones disponibles y reservar
-              habitaciones de su hotel. <br> El hotel posee tres tipos de
-              habitaciones: simple, doble y matrimonial, y dos tipos de clientes:
-              habituales y esporádicos. Una reserva viene determinada por los datos
-              del cliente, los datos de la habitación, la fecha de entrada y el
-              número de días que estará ocupada la habitación. <br>  </p>
+              <h1 class="display-4">Listado de habitaciones disponibles</h1>
 
+              <hr class="my-4">
+
+              <a class="btn btn-light btn-lg" href="#" role="button">Listar Hab. disponibles</a>
             </div>
 
-            <div class="col-md-6">
-              <img src="img/imgPrueba.png" alt="imagen" class="img-fluid">
-            </div>
+
+
 
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Pie de pagina -->
-    <footer>
-       Derechos reservados | Ingenieria de Software ©
-    </footer>
+    <center>
+    <!--<div class="background text-white py-5">
 
+            <img src="img/imgPrueba.png" alt="imagen" class="img-fluid">
+
+    </div>-->
+
+    <div class="background text-black py-5">
+      <h1 class="page-header">Habitaciones disponibles </h1>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width:180px;">Código Hab.</th>
+            <th style="width:120px;">Tipo</th>
+            <th style="width:120px;">Disponibilidad</th>
+            <th style="width:120px;">Precio</th>
+            <th style="width:120px;">Fecha proxima reserva</th>
+            <th style="width:120px;">Descripcion</th>
+          </tr>
+        </thead>
+
+      </table>
+
+    </div>
+
+    <!-- Pie de pagina -->
+    <%include ../partials/footer%>
+  </center>
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -103,3 +121,4 @@
     <!-- Bootstrap JavaScript -->
   </body>
 </html>
+

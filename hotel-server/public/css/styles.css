@@ -1,0 +1,27 @@
+.cabecera-principal {
+  background: #000428;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px #000;
+}
+
+/* footer de la pagina*/
+footer {
+  align-self: flex-end;
+  font-family: cursive;
+  line-height: 6;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+.cabeceraAzul{
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
