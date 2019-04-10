@@ -15,7 +15,7 @@ router.get('/req2', (req, res) => {
 })
 
 router.get('/req3', (req, res) => {
-  res.render('pages/req4')
+  res.render('pages/req3')
 })
 
 router.get('/req4', (req, res) => {
