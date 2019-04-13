@@ -1,0 +1,84 @@
+.cabecera-principal {
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar{
+  box-shadow: 2px 2px 5px #000;
+}
+h1{
+	font-family:Comic Sans MS;
+    font-size:50px;
+	text-align:center;
+}
+h2{
+    font-family:Comic Sans MS;
+    font-size:30px;
+    color:#000000;
+    text-align:center;
+}
+
+dat{
+	background:#fff;
+    font-family:Comic Sans MS;
+    font-size:20px;
+    text-align:center;	
+}
+
+#text {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #000000;
+    background: #fff;
+    border-radius: 6px 6px 6px 6px;
+}
+
+#text:hover {
+    background: #75ACEC ;
+}
+
+#back {
+	background: #eee;
+	font-weight: bold;
+	color:#eee;
+}
+
+#submit {
+    font-weight: bold;
+    font-size:18px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 0 10px 20px 0;
+    border: 1.5px solid #ccc;
+    background: #fff;
+    border-radius: 8px 8px 8px 8px;
+}
+
+#submit:hover {
+    background: #75ACEC ;
+}
+
+#box {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5px;
+    margin: 0 5px 5px 0;
+    border: 0.5px solid #ccc;
+    background: #eee;
+    border-radius: 6px 6px 6px 6px;
+}
+
+#box:hover {
+    background: #fff;
+}
+
+titulo{
+	
+}
+
+table{
+	text-align:center;
+}

@@ -11,10 +11,10 @@
     <!--Bootstrap 4 -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-req6.css">
     <!-- Custom CSS -->
 
-    <title></title>
+    <title>Software Hotel</title>
   </head>
   <body>
 
@@ -26,30 +26,58 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 text-center">
-                <h1>Buscar precio total</h1>
-
-                  <form>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput">Número de identificación</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2">Tipo de habitació</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2">Número de noches</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-                    </div>
-
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                  </form>
+                <h1>Reservacion de Habitaciones</h1>
 
               </div>
+
+              <div class="col-md-6">
+                <img src="img/imgPrueba.png" alt="imagen" class="img-fluid">
+              </div>
+
+
+
             </div>
           </div>
         </div>
     </header>
+    <req>
+        <p>
+        	<h2>Lista de Habitaciones Disponibles y Ocupadas</h2>
+        </p>
+    </req>
+
+    <dat>
+	    <center>
+		    <table width="600" cellspacing="1" cellpadding="3" border="1" bgcolor="#1E679A">
+			    <td bgcolor="#eee">
+				    <font>
+					    <h3>Reservacion de la habitacion</h3><br>
+						    <back>
+						      <form method="POST" action="nuevareserva">
+						       Nombre del cliente <input type="text" id="text" name="txtNombre"><p><p>
+						       Identificacion del cliente <input type="text" id="text" name="txtIdentificacion"><p>
+						       Numero de la habitacion <input type="text" id="text" name="txtHabitacion"><p>
+						       Datos extras<p>
+						       Numero de personas <input type="text" id="text" name="txtPersonas"><p>
+						       Fecha de entrada <input type="text" id="text" name="txtEntrada"><p>
+						       Fecha de salida <input type="text" id="text" name="txtSalida"><p>
+						       Numero de dias <input type="text" id="text" name="txtDias"><p>
+						       Mascotas <input type="radio" name="mascota" value="1">Si <input type="radio" name="mascota" value="2"> No<p>
+						       Servicios extras<p>
+						       Gimnasio <input type="checkbox" name="extras" value="1"><p>
+						       Piscina <input type="checkbox" name="extras" value="2"><p>
+						       <br>
+							     <input type="submit" value ="Reservar" id="submit" name="submit"/>
+						      </form>
+						    </back>
+				    </font>
+			    </td>
+		    </table>
+	    </center>
+    </dat>
+
+    <% include ../partials/footer%>
+
 
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
