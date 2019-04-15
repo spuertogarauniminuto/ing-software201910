@@ -23,6 +23,9 @@ router.get('/req4', (req, res) => {
 })
 
 router.get('/req5', (req, res) => {
+  res.send('req5_1.ejs')
+  res.send('req5_2.ejs')
+  res.send('req5_3.ejs')
   res.render('pages/req5')
 })
 
