@@ -4,8 +4,78 @@
     <meta charset="utf-8">
 
     <title></title>
-  </head>
-  <body>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <!--Bootstrap 4 -->
 
-  </body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom CSS -->
+
+
+    <center>   
+        <table>
+
+            <img src="https://raw.githubusercontent.com/spuertogarauniminuto/ing-software201910/master/hotel-server/public/img/1.jpg" >
+
+            <p style="color:black;"><label for="repass">Modificar Valor de Habitación Clientes Habituales (Descuento)</label></p>
+
+            <tr
+                <td><label><h2 style="color:white;">Datos Cliente:</h2></label>
+            </tr>
+            <tr>
+                <td><label>Nombres Cliente:</label></td> <td><input type="text" name="nombre" id="nombre" placeholder="nombres"></td>
+            </tr>
+            <tr>
+                <td><label>Apellidos Cliente:</label></td> <td><input type="text" name="apellido" id="nombre" placeholder="apellidos"></td>
+            </tr>
+            <tr>
+                <td><label>Direccion:</label></td> <td><input type="text" name="direccion" id="direccion" placeholder="direccion"></td>
+            </tr>
+            <tr>
+                <td><label>Telefono:</label></td> <td><input type="text" name="telefono" id="telefono" placeholder="telefono"></td>
+            </tr>
+            <tr>
+                <td><label>Precio Habitacion Requerida:</label></td> <td><input type="number" name="habitacion" id="habitacion" placeholder="habitacion"></td>
+            </tr>
+            <tr>
+                <td><label>Porcentaje Descuento:</label></td> <td><input type="number" name="porcentaje" id="porcentaje" placeholder="porcentaje"></td>
+            </tr>
+        </table>
+        
+    <body>
+    
+            <div class="botonera">
+                
+                <input id="calcular" type="button" name="enviar" value="Calcular Descuento">
+            </div>
+        </form>
+        <div id="resultado"></div>
+        <script type="text/javascript">
+            function calcular()
+            {
+                h = document.getElementById('habitacion').value;
+                p = document.getElementById('porcentaje').value;
+                document.getElementById('resultado').innerHTML = "El valor de su habitacion con descuento es "+ (h-((h*p)/100));
+
+            }
+            document.getElementById('calcular').addEventListener("click", calcular);
+        </script>
+    </article>
+    
+    <!-- Pie de pagina -->
+    <footer>
+       &copy 2019
+     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript -->
+    </center>
+</body>
 </html>
