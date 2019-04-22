@@ -8,3 +8,8 @@ Creación de la página en Bootstrap
 https://getbootstrap.com/
 
 Link para que se guien en la creación de la página para que quede uniforme con estilos prerealizados en este framework
+
+**Necesario para su uso**
+```shell
+  npm install express mysql express-myconnection morgan ejs
+```
