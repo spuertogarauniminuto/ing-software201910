@@ -2,6 +2,7 @@
 
 const express = require('express')
 const router = express.Router()
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
@@ -72,4 +73,5 @@ router.get('/req15', (req, res) => {
 router.get('/req16', (req, res) => {
   res.render('pages/req16')
 })
+
 module.exports = router

@@ -29,14 +29,14 @@
               <div class="col-md-6 text-center">
                 <h1>Buscar precio total</h1>
 
-                  <form>
+                  <form action="/req4" method="post">
                     <div class="form-group">
                       <label for="formGroupExampleInput">Número de identificación</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                      <input name="id" type="text" class="form-control"  required>
                     </div>
                     <div class="form-group">
                        <label for="exampleFormControlSelect1">Tipo de Habitación</label>
-                       <select class="form-control" id="exampleFormControlSelect1">
+                       <select name="opcion" class="form-control" id="exampleFormControlSelect1">
                          <option>Simple</option>
                          <option>Doble</option>
                          <option>Matrimonial</option>
@@ -44,11 +44,12 @@
                     </div>
                     <div class="form-group">
                       <label for="formGroupExampleInput2">Número de noches</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="1......N">
+                      <input name="n_noches" type="text" class="form-control" id="formGroupExampleInput2" placeholder="1......N" required>
                     </div>
 
                     <input class="btn btn-primary" type="submit" value="Buscar">
                   </form>
+
 
               </div>
 
