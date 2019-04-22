@@ -14,14 +14,31 @@
 /* footer de la pagina*/
 footer {
   align-self: flex-end;
+  background: black;
   font-family: cursive;
   line-height: 6;
+  color: white;
   font-size: 20px;
   text-align: center;
   width: 100%;
 }
+
 .cabeceraAzul{
   background: #56CCF2;
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
   background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
+.col {
+  position: relative;
+  display: inline-block;
+}
+
+.tituloReq8{
+  font-family: cursive;
+  font-size: 45px;
+  color: white;
+  position: absolute;
+  top: -280px;
+  left: 100px;
 }

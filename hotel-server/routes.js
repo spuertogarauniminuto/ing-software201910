@@ -1,7 +1,9 @@
 'use strict'
+const express = require('express');
+const router = express.Router();
 
-const express = require('express')
-const router = express.Router()
+const custom = require('./controller/practica');
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
@@ -34,12 +36,7 @@ router.get('/req7', (req, res) => {
   res.render('pages/req7')
 })
 
-router.get('/req8', (req, res) => {
-  res.render('pages/req8')
-})
-router.get('/req8/reservas', (req, res) => {
-  res.render('pages/req8_Reservas')
-})
+router.get('/req8', custom.listreq8);
 
 router.get('/req9', (req, res) => {
   res.render('pages/req9')

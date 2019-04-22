@@ -1,79 +1,83 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css" crossorigin="anonymous">
+    <!--Bootstrap 4 -->
 
-    <link rel="stylesheet" href="css/styles_req8.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom CSS -->
 
-    
+    <title>Informacion clientes</title>
   </head>
-
   <body>
-  	<header><!--Incio del header-->
-        <div class="wrapper">
-		  <div id="logo"><!--Declaracion de imagen del logo con su texto-->
-        <a href="index.html"><img src="/img/1.jpg" width="120" height="120" align="left"></a>
-		  </div><!--Fin de declaracion-->
 
-  		<nav class="navegacion">
-			 <ul class= "menu"><!--Opciones en el menu-->
+    <!--Navegación-->
+    <%include ../partials/header%>
 
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="https://github.com/spuertogarauniminuto/ing-software201910">Source</a></li>
-
-				  <li><a href="">Requerimiento</a>
-            <ul class="submenu">
-              <li><a href="req1.html">Requerimiento 1</a></li> 
-              <li><a href="req2.html">Requerimiento 2</a></li> 
-              <li><a href="req3.html">Requerimiento 3</a></li>
-              <li><a href="req4.html">Requerimiento 4</a></li> 
-              <li><a href="req5.html">Requerimiento 5</a></li> 
-              <li><a href="req6.html">Requerimiento 6</a></li> 
-              <li><a href="req7.html">Requerimiento 7</a></li> 
-              <li><a href="req8.html">Requerimiento 8</a></li> 
-              <li><a href="req9.html">Requerimiento 9</a></li> 
-              <li><a href="req10.html">Requerimiento 10</a></li>  
-              <li><a href="req11.html">Requerimiento 11</a></li>
-              <li><a href="req12.html">Requerimiento 12</a></li>
-              <li><a href="req13.html">Requerimiento 13</a></li>
-              <li><a href="req14.html">Requerimiento 14</a></li>
-              <li><a href="req15.html">Requerimiento 15</a></li>
-              <li><a href="req16.html">Requerimiento 16</a></li>
-            </ul> 
-				  </li><!--fin de lista desplegable en el menu-->
-
-			 </ul><!--Fin de Opciones en el menu-->
-		  </nav>
+    <!-- Cabecera -->
+    <header>
+      <div style="background-image: url(img/5.jpg);background-size: cover; background-repeat: no-repeat; width: 100%; height: 300px;">
       </div>
-	 </header><!--Fin del header-->
-	
-	<section id="categorias">
-
-    <section class="uno">
-          <img class="imagen" src="/img/2.jpg" width="450" height="300">  
+      <div >
+        <div class="col">
           <br>
-          <h3>Información de los Huéspedes de cada una de las habitaciones ocupadas</h3>
-          <p class="parrafo">
-            Da click al boton para dar informacion personal de los huespedes actuales de cada una de las habitaciones ocupadas registradas en nuestro sistema...!
-          </p><br>
-          <a href="req8_Reservas.html" class="leer-mas">Informacion de los clientes</a><br><br>
-      </section><!--/fin section uno-->
+          <div class="tituloReq8">Listado de los clientes en las habitaciones ocupadas</div>
+        </div>
+      </div>
+    </header>
 
-	</section><!--/fin de las categorias-->
+    <div class="container">
+      <div class="row mt-7">
+        <div class="col-md-9">
+          <table class="table table-bordered table-hover">
 
-   <%include ../partials/footer%>
+            <h1>Clientes actuales en el hotel</h1>
 
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Tipo de habitacion</th>
+                <th>Numero habitacion</th>
+                <th>Dias de huesped</th>
+              </tr>
+            </thead>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <tbody>
+              <% if (data) {%>
+                <% for (var i = 0; i < data.length; i++) { %>
+                    <tr>
+                      <td><%= data[i].id %></td>
+                      <td><%= data[i].FName %></td>
+                      <td><%= data[i].LName %></td>
+                      <td><%= data[i].Phone %></td>
+                      <td><%= data[i].Email %></td>
+                      <td><%= data[i].TRoom %></td>
+                      <td><%= data[i].NRoom %></td>
+                      <td><%= data[i].nodays %></td>
+                    </tr>
+                <% } %>
+              <% } %>
+            </tbody>
+
+            </table>
+        </div>
+      </div>
+    </div>
+    <!-- Pie de pagina -->
+    <%include ../partials/footer%>
+
+    <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <!-- Bootstrap JavaScript -->
   </body>
 </html>
