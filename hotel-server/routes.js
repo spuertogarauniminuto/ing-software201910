@@ -2,6 +2,7 @@
 
 const express = require('express')
 const router = express.Router()
+const db = require('hotel-db')
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
@@ -10,8 +11,11 @@ router.get('/req1', (req, res) => {
   res.render('pages/req1')
 })
 
-router.get('/req2', (req, res) => {
-  res.render('pages/req2')
+router.get('/req2', async (req, res) => {
+  await db.query({ sql: 'SELECT * FROM room WHERE room.type = ?', values: [req.query.type] }, (error, results, fields) => {
+    if (error) throw error
+    res.render('pages/req2', {rooms: results})
+  })
 })
 
 router.get('/req3', (req, res) => {
