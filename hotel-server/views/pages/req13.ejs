@@ -2,10 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <title></title>
-  </head>
+    <title>Calculo de las ganancias mensuales del Hotel Uniminuto</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="datepicker/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="datepicker/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="datepicker/jquery-ui.theme.css">
+    <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+    <script type="text/javascript" src="datepicker/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#FechaInicial").datepicker();
+      $("#FechaFinal").datepicker();
+    });
+    </script>
+    </head>
   <body>
+    <div class="form"><center><h1>Calcular las ganacias mensuales</h1></center>
+    <center>
+      <p1>Para realizar el calculo de las ganacias mensual que obtiene el hotel seleccione la fecha inicial y final en la cual quiere saber la ganacia como resultado oprimiendo el boton calcular</p1>
+      <form>
+        <p>Fecha Inicial</p>
+      <input type="text" id="FechaInicial" placeholder="00/00/00" class="input1" required>
+        <p>Fecha Final</p>
+      <input type="text" id="FechaFinal" placeholder="00/00/00" class="input2" required>
+      <br>
+      <br>
+      <center><input type="submit" value="CALCULAR" class="boton"></center>
+      <textarea name="resultado" placeholder="resultado de ganacias mensuales"></textarea>
+
+      </form>
+      </div></center>
 
   </body>
 </html>
+
