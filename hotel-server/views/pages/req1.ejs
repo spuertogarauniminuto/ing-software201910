@@ -21,6 +21,8 @@
     <!--Navegación-->
     <%include ../partials/header%>
 
+
+
     <!-- Cabecera -->
     <header class="cabecera-principal">
 
@@ -33,41 +35,37 @@
 
               <hr class="my-4">
 
-              <a class="btn btn-warning btn-lg" href="#" role="button">Listar Hab. disponibles</a>
+              <a class="btn btn-warning btn-lg" href="req1" role="button">Listar Hab. disponibles</a>
             </div>
-
-
-
-
           </div>
         </div>
       </div>
     </header>
 
     <center>
-    <!--<div class="background text-white py-5">
+    <div class="row container ">
+      <div class="col py-5 text-center">
 
-            <img src="img/imgPrueba.png" alt="imagen" class="img-fluid">
-
-    </div>-->
-
-    <div class="background text-black py-5">
-      <h1 class="page-header">Habitaciones disponibles </h1>
-
-      <table class="table table-striped" style="width:70%;">
-        <thead>
+        <table class="table table-striped" style="width:70%;">
           <tr>
             <th style="width:180px;">Código Hab.</th>
+            <th style="width:120px;">Categoria</th>
             <th style="width:120px;">Tipo</th>
             <th style="width:120px;">Disponibilidad</th>
-            <th style="width:120px;">Precio</th>
-            <th style="width:120px;">Fecha proxima reserva</th>
-            <th style="width:120px;">Descripcion</th>
           </tr>
-        </thead>
+          <% for(var i=0; i< data.length; i++){ %>
 
-      </table>
+            <tr>
+              <td><%= data[i].id %></td>
+              <td><%= data[i].type %></td>
+              <td><%= data[i].bedding %></td>
+              <td><%= data[i].place %></td
+            </tr>
 
+            
+          <% } %>
+        </table>
+      </div>
     </div>
 
     <!-- Pie de pagina -->

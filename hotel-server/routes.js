@@ -2,12 +2,23 @@
 
 const express = require('express')
 const router = express.Router()
+
+const dbConnection = require('/home/david/github/ing-software201910/hotel-db/index.js');
+
+const connection = dbConnection;
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
 
 router.get('/req1', (req, res) => {
-  res.render('pages/req1')
+  connection.query('SELECT * FROM room ', (err,result) => {
+
+
+    res.render('pages/req1',{
+      data : result
+    })
+  })
 })
 
 router.get('/req2', (req, res) => {
