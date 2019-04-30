@@ -3,9 +3,6 @@
 const express = require('express')
 const router = express.Router()
 
-const dbConnection = require('/home/alejo/github/ing-software201910/hotel-db/index.js');
-const connection = dbConnection;
-
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
