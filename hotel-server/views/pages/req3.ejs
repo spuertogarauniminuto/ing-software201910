@@ -31,23 +31,38 @@
 
                   <form>
                     <br></br>
+                    
+                    <div class="form-group">
+                      <label for="nombre">Nombre Del Usuario</label>
+                      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingrese nombre del usuario">
+                    </div>
 
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Nombre Del Usuario</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese nombre del usuario">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Número De Identificación Del Usuario</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese el número de identificación del usuario">
-                    </div>
+                      <label for="identificacion">Número De Identificación Del Usuario</label>
+                      <input type="text" class="form-control" id="identificacion" placeholder="Ingrese el número de identificación del usuario">
+
+
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Elegir Tipo De Habitación</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Elegir...</option>
+                              <option>Simple</option>
+                              <option>Doble</option>
+                              <option>Matrimonial</option>
+                            </select>
+                          </div>
+                        </div>
+
                       <br></br>
                     <button type="submit" class="btn btn-warning">Buscar</button>
+                    <button type="reset" class="btn btn-warning">Limpiar Campos</button>
                   </form>
 
             </div>
 
             <div class="col-md-6">
               <img src="/img/imgDescuento.jpg" alt="imagen" class="img-fluid">
+
             </div>
 
           </div>
