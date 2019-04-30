@@ -54,15 +54,14 @@
             <th style="width:120px;">Disponibilidad</th>
           </tr>
           <% for(var i=0; i< data.length; i++){ %>
-
-            <tr>
-              <td><%= data[i].id %></td>
-              <td><%= data[i].type %></td>
-              <td><%= data[i].bedding %></td>
-              <td><%= data[i].place %></td
-            </tr>
-
-            
+            <% if (data[i].place == "Free"){%>
+              <tr>
+                <td><%= data[i].id %></td>
+                <td><%= data[i].type %></td>
+                <td><%= data[i].bedding %></td>
+                <td><%= data[i].place %></td
+              </tr>
+            <% }%>
           <% } %>
         </table>
       </div>
