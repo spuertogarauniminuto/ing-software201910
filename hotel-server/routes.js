@@ -3,6 +3,9 @@
 const express = require('express')
 const router = express.Router()
 
+const dbConnection = require('/home/alejo/github/ing-software201910/hotel-db/index.js');
+const connection = dbConnection;
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
@@ -21,6 +24,14 @@ router.get('/req3', (req, res) => {
 
 router.get('/req4', (req, res) => {
   res.render('pages/req4')
+})
+
+router.get('/req4', (req, res) => {
+  connection.query('SELECT * FROM room ', (err,result) => {
+    res.render('pages/req4',{
+      data : result
+    })
+  })
 })
 
 router.get('/req5', (req, res) => {

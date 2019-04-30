@@ -22,6 +22,7 @@
     <%include ../partials/header%>
     <!--Navegación-->
 
+
       <header class="cabecera-principal">
         <div class="background text-white py-5">
           <div class="container">
@@ -29,7 +30,7 @@
               <div class="col-md-6 text-center">
                 <h1>Buscar precio total</h1>
 
-                  <form action="/req4" method="post">
+                  <form action="/req4" method="get">
                     <div class="form-group">
                       <label for="formGroupExampleInput">Número de identificación</label>
                       <input name="id" type="text" class="form-control"  required>
@@ -60,6 +61,34 @@
           </div>
         </div>
     </header>
+
+    <br>
+    <center>
+    <div class="col-md-10 text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Tipo de Habtación</th>
+                  <th scope="col">Número de noches</th>
+                  <th scope="col">Precio Total</th>
+                </tr>
+                <% for(var i=0; i < data.length; i++){ %>
+                  <% if (data[i].place == "Free"){%>
+                    <tr>
+                      <td><%= data[i].id %></td>
+                      <td><%= data[i].type %></td>
+                      <td><%= data[i].bedding %></td>
+                      <td><%= data[i].place %></td
+                    </tr>
+                  <% }%>
+                <% } %>
+            </thead>
+        </table>
+    </div>
+    </center>
+
+
 
 <%include ../partials/footer%>
 
