@@ -22,7 +22,8 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "mysql": "^2.17.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.11",
