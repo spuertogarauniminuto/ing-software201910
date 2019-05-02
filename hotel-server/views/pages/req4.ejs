@@ -38,9 +38,10 @@
                     <div class="form-group">
                        <label for="exampleFormControlSelect1">Tipo de Habitación</label>
                        <select name="opcion" class="form-control" id="exampleFormControlSelect1">
-                         <option>Simple</option>
-                         <option>Doble</option>
-                         <option>Matrimonial</option>
+                         <option>Superior Room</option>
+                         <option>Single Room</option>
+                         <option>Deluxe Room</option>
+                         <option>Guest House</option>
                        </select>
                     </div>
                     <div class="form-group">
@@ -73,15 +74,22 @@
                   <th scope="col">Número de noches</th>
                   <th scope="col">Precio Total</th>
                 </tr>
-    
+                <% for(var i=0; i< data.length; i++){ %>
+                  <% if (data[i].place == "Free"){%>
+                    <tr>
+                      <td><%= data[i].id %></td>
+                      <td><%= data[i].type %></td>
+                      <td><%= data[i].bedding %></td>
+                      <td><%= data[i].place %></td
+                    </tr>
+                  <% }%>
+                <% }%>
             </thead>
         </table>
     </div>
     </center>
 
-
-
-<%include ../partials/footer%>
+    <%include ../partials/footer%>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

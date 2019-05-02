@@ -23,12 +23,9 @@ router.get('/req3', (req, res) => {
   res.render('pages/req3')
 })
 
-router.get('/req4', (req, res) => {
-  res.render('pages/req4')
-})
+router.get('/req4/:opcion', (req, res) => {
 
-router.get('/req4', (req, res) => {
-  connection.query('SELECT * FROM room ', (err,result) => {
+  connection.query('SELECT * FROM room WHERE type = ?',[req.params.opcion],(err,result) => {
     res.render('pages/req4',{
       data : result
     })
