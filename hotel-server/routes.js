@@ -3,6 +3,10 @@
 const express = require('express')
 const router = express.Router()
 
+const dbConnection = require('../hotel-db/index.js');
+
+const connection = dbConnection;
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
