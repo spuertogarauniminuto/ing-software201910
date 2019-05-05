@@ -6,6 +6,7 @@ const router = express.Router()
 const dbConnection = require('../hotel-db/index.js');
 
 const connection = dbConnection;
+const bodyParser = require('body-parser');
 
 router.get('/', (req, res) => {
   res.render('pages/index')
@@ -24,13 +25,12 @@ router.get('/req3', (req, res) => {
 })
 
 router.get('/req4', (req, res) => {
-
-  connection.query('SELECT * FROM room WHERE type = ?',[req.params.opcion],(err,result) => {
+  connection.query('SELECT * FROM room',(err,result) => {
     res.render('pages/req4',{
       data : result
-    })
-  })
-})
+    });
+  });
+});
 
 router.get('/req5', (req, res) => {
   res.render('pages/req5')
