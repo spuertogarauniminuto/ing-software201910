@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                        <label for="exampleFormControlSelect1">Tipo de Habitación</label>
-                       <select name="opcion" class="form-control" id="opcion">
+                       <select name="TRoom" class="form-control">
                          <option>Superior Room</option>
                          <option>Single Room</option>
                          <option>Deluxe Room</option>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                       <label for="formGroupExampleInput2">Número de noches</label>
-                      <input name="n_noches" type="text" class="form-control" id="formGroupExampleInput2" placeholder="1......N" required>
+                      <input name="nodays" type="text" class="form-control" id="formGroupExampleInput2" placeholder="1......N" required>
                     </div>
 
                     <input class="btn btn-primary" type="submit" value="Buscar">
@@ -74,16 +74,14 @@
                   <th scope="col">Número de noches</th>
                   <th scope="col">Precio Total</th>
                 </tr>
-                <% for(var i=0; i< data.length; i++){ %>
-                  <% if (data[i].place == "Free"){%>
-                    <tr>
-                      <td><%= data[i].id %></td>
-                      <td><%= data[i].type %></td>
-                      <td><%= data[i].bedding %></td>
-                      <td><%= data[i].place %></td
-                    </tr>
-                  <% }%>
-                <% }%>
+                <% for(var i=0; i < data.length; i++){ %>
+                  <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].TRoom %></td>
+                    <td><%= data[i].nodays %></td>
+                    <td><%= 2000 %></td
+                  </tr>
+              <% }%>
             </thead>
         </table>
     </div>
