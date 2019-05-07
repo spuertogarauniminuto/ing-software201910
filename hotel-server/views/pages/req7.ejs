@@ -4,31 +4,93 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
-	<link rel="stylesheet" href="/css/styles.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>Formulario</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>Eliminación de reservas</title>
 </head>
 <body>
-<% include ../partials/header%>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href=" ">Software Hotel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="https://github.com/spuertogarauniminuto/ing-software201910">Source</a>
+                  </li>
+                  <li class="nav-item dropleft">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Requerimientos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="req1">Requerimiento 1</a>
+                      <a class="dropdown-item" href="req2">Requerimiento 2</a>
+                      <a class="dropdown-item" href="req3">Requerimiento 3</a>
+                      <a class="dropdown-item" href="req4">Requerimiento 4</a>
+                      <a class="dropdown-item" href="req5">Requerimiento 5</a>
+                      <a class="dropdown-item" href="req6">Requerimiento 6</a>
+                      <a class="dropdown-item" href="req7">Requerimiento 7</a>
+                      <a class="dropdown-item" href="req8">Requerimiento 8</a>
+                      <a class="dropdown-item" href="req9">Requerimiento 9</a>
+                      <a class="dropdown-item" href="req10">Requerimiento 10</a>
+                      <a class="dropdown-item" href="req11">Requerimiento 11</a>
+                      <a class="dropdown-item" href="req12">Requerimiento 12</a>
+                      <a class="dropdown-item" href="req13">Requerimiento 13</a>
+                      <a class="dropdown-item" href="req14">Requerimiento 14</a>
+                      <a class="dropdown-item" href="req15">Requerimiento 15</a>
+                      <a class="dropdown-item" href="req16">Requerimiento 16</a>
+                    </div>
+                  </li>
+              </ul>
+        </div>
+    </nav>
+    <header class="cabecera-principal">
+      <div class="background text-white py-5 cabeceraAzul">
+          <div class="row">
+            <div class="col">
+              <h1 class="display-4">Eliminacion de reservas</h1>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 	<div class="container">
 		<div class="form_top">
 			<h1>Eliminar <span>Reserva</span></h1s>
 		</div>
-		<form class="form_reg" action="">
-			<input class="input" type="text" placeholder="&#128100; Numero de reserva" required autofocus>
-			<input class="input" type="text" placeholder="&#127976; Piso" required>
-			<input class="input" type="text" name="" placeholder="&#8470; Numero de habitación" pattern required>
+		<form class="form_reg" method="POST" action="">
+      <input class="input" type="text" name="num_res" placeholder="&#128100; Numero de reserva" required autofocus>
+      <div class="radio">
+        <input type="radio" name="piso" id="1" required>
+        <label for="1">Piso 1</label>  
+        <input type="radio" name="piso" id="2" required>
+        <label for="2">Piso 2</label>
+        <input type="radio" name="piso" id="3" required>
+        <label for="3">Piso 3</label>
+        <input type="radio" name="piso" id="4" required>
+        <label for="4">Piso 4</label>
+        <input type="radio" name="piso" id="5" required>
+        <label for="5">Piso 5</label>
+      </div>
+			<input class="input" type="text" name="num_hab" placeholder="&#8470; Numero de habitación" required>
 			<div class="btn_form">
-				<input class="btn_submit" type="submit" value="VALIDAR">
-				<input class="btn_reset" type="reset" value="LIMPIAR">
+				<input class="btn_submit" name="buscar" type="submit" value="VALIDAR">
+				<input class="btn_reset" name="reiniciar" type="reset" value="LIMPIAR">
 			</div>
 		</form>
 	</div>
-  <% include ../partials/footer%>
-  <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+ <footer>
+      Derechos reservados | Ingenieria de Software &copy
+  </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>
