@@ -3,9 +3,6 @@
 const express = require('express')
 const router = express.Router()
 
-const dbConnection = require('/home/david/github/ing-software201910/hotel-db/index.js');
-
-const connection = dbConnection;
 
 router.get('/', (req, res) => {
   res.render('pages/index')
@@ -21,8 +18,11 @@ router.get('/req1', (req, res) => {
   })
 })
 
-router.get('/req2', (req, res) => {
-  res.render('pages/req2')
+router.get('/req2', async (req, res) => {
+  await db.query({ sql: 'SELECT * FROM room WHERE room.type = ?', values: [req.query.type] }, (error, results, fields) => {
+    if (error) throw error
+    res.render('pages/req2', {rooms: results})
+  })
 })
 
 router.get('/req3', (req, res) => {
@@ -30,8 +30,22 @@ router.get('/req3', (req, res) => {
 })
 
 router.get('/req4', (req, res) => {
-  res.render('pages/req4')
-})
+  db.query('SELECT * FROM roombook',(err,result) => {
+    res.render('pages/req4',{
+      data : result
+    });
+  });
+});
+
+router.post ('/req4', (req, res) => {
+  const { id, TRoom, nodays } = req.body
+  db.query('SELECT * FROM roombook WHERE ? AND ? AND ?',
+  [{id}, {TRoom}, {nodays}], (err, result) => {
+    res.render('pages/req4', {
+      data : result
+    });
+  });
+});
 
 router.get('/req5', (req, res) => {
   res.render('pages/req5')
@@ -83,4 +97,5 @@ router.get('/req15', (req, res) => {
 router.get('/req16', (req, res) => {
   res.render('pages/req16')
 })
+
 module.exports = router
