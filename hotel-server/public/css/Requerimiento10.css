@@ -1,0 +1,73 @@
+body
+{
+	background-color: white;
+	font-family: "Arial"; 
+}
+
+#tabla
+{
+	margin: 150px auto;
+	width: 600px;
+}
+
+table
+{
+	background-color: White;
+	text-align: center;
+	border-collapse: collapse;
+	width: 80%;
+}
+
+th, td
+{
+	padding: 20px;
+}
+thead
+{
+	background-color: #369681;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+tr:nth-child(even)
+{
+	background-color: #ddd;
+}
+tr:hover td
+{
+	background-color: #369681;
+	color: white;
+}
+
+.cabecera-principal 
+{
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+}
+.navbar 
+{
+  box-shadow: 2px 2px 5px #000;
+}
+
+footer
+{
+  align-self: flex-end;
+  font-family: cursive;
+  line-height: 6;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.cabeceraAzul
+{
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
+.display-4
+{
+	text-align: center;
+	font-family: cursive;
+}

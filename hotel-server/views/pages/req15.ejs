@@ -1,11 +1,88 @@
-<!DOCTYPE html>
+<?php
+  $servername = "localhost";
+  $database = "PrototipoBD";
+  $dbpass = "root";
+  $dbpass = "";
+
+  //conexión
+
+  $conn = mysqli_connect($servername,$dbname,$dbpass,$database);
+
+  //comprobar conexion
+
+  if(!$conn){
+    die("conexion fallida: " . mysqli_connect_error());
+  }else {
+    echo "conectado-";
+    $base = mysqli_select_db($conn, "PrototipoBD");
+    if(!$base){
+      echo "no se encontro la base de datos: ".mysqli_error($conn);
+    }else{
+      //sentencia y ejecucion
+      $ssql = "SELECT * FROM informacion";//AQUI DEBE IR LA Tabla
+      $ejecucion = mysqli_query($conn, $ssql);
+      if($ejecucion){
+        echo "hay un error en la sentencia de sql: ".$ssql;
+      }else{
+        //traer resultado en forma de Array
+        $list = mysqli_fetch_array($ejecucion);
+      }
+    }
+  }
+
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <title></title>
+    <title>Requermiento 15</title>
   </head>
   <body>
-
+    <div class="hd">
+      <center><h1>Calculo de consumo por habitacion</h1></center>
+    </div>
+    <div class="tl"><center>
+      <table border = "1" width = "1300" length = "200"><!--Deben ser 6 columnas, NOTA:
+        vamos a implementar una visualizacion de la base de datos en una tabla HTML-->
+        <tr>
+          <td>N°Habitación</td>
+          <td>Nombre del Huesped</td>
+          <td>Identificacion del huesped</td>
+          <td>Fecha del pedido</td>
+          <td>Precio</td>
+        </tr> <!--Tabla informacion-->
+        <?php
+          $xql = "SELECT * FROM informacion";
+          $ejec = mysqli_query($conn,$xql);
+          while($lis = mysqli_fetch_array($ejec)){
+        ?>
+        <tr><!--Nombre de las columnas-->
+          <td><?php echo $lis['habi']?></td>
+          <td><?php echo $lis['nomb_hues']?></td>
+          <td><?php echo $lis['id_hues']?></td>
+          <td><?php echo $lis['fecha']?></td>
+          <td><?php echo $lis['consumo']?></td>
+        </tr>
+      </table></center>
+    </div>
+    <br/><br/>
+    <div class="cal">
+      <h2><center>Calculo final</center></h2>
+    </div>
+    <div class="resul"><center>
+      <table border = "1" width = "1300" length = "200">
+        <tr>
+          <td>N°Habitación</td>
+          <td>Nombre del Huesped</td>
+          <td>Identificacion del huesped</td>
+          <td>Total</td>
+        </tr>
+        <tr>
+          <td><?php echo $li[''];?></td>
+          <td><?php echo $li[''];?></td>
+          <td><?php echo $li[''];?></td>
+          <td><?php echo $li[''];?></td>
+        </tr>
+      </table></center>
+    </div>
   </body>
 </html>

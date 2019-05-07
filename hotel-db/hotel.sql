@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2018 a las 00:38:44
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 7.0.13
+-- Servidor: localhost
+-- Tiempo de generación: 23-04-2019 a las 16:44:36
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -20,7 +22,8 @@ SET time_zone = "+00:00";
 -- Base de datos: `hotel`
 --
 CREATE DATABASE hotel;
-use hotel;
+USE hotel;
+
 -- --------------------------------------------------------
 
 --
@@ -110,32 +113,28 @@ INSERT INTO `payment` (`id`, `title`, `fname`, `lname`, `troom`, `tbed`, `nroom`
 
 CREATE TABLE `room` (
   `id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(15) DEFAULT NULL,
-  `bedding` varchar(10) DEFAULT NULL,
-  `place` varchar(10) DEFAULT NULL,
-  `cusid` int(11) DEFAULT NULL
+  `type` enum('single room','doble room','matrimonial room','') NOT NULL,
+  `occupied` tinyint(1) NOT NULL DEFAULT '0',
+  `floor` enum('1','2','3','4','5','6','7','8','9','10','') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `number_room` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `room`
 --
 
-INSERT INTO `room` (`id`, `type`, `bedding`, `place`, `cusid`) VALUES
-(1, 'Superior Room', 'Single', 'Free', NULL),
-(2, 'Superior Room', 'Double', 'Free', 0),
-(3, 'Superior Room', 'Triple', 'Free', NULL),
-(4, 'Single Room', 'Quad', 'Free', NULL),
-(5, 'Superior Room', 'Quad', 'Free', NULL),
-(6, 'Deluxe Room', 'Single', 'Free', NULL),
-(7, 'Deluxe Room', 'Double', 'NotFree', 3),
-(8, 'Deluxe Room', 'Triple', 'Free', NULL),
-(9, 'Deluxe Room', 'Quad', 'Free', NULL),
-(10, 'Guest House', 'Single', 'Free', NULL),
-(11, 'Guest House', 'Double', 'Free', NULL),
-(12, 'Guest House', 'Quad', 'Free', NULL),
-(13, 'Single Room', 'Single', 'Free', NULL),
-(14, 'Single Room', 'Double', 'Free', NULL),
-(15, 'Single Room', 'Triple', 'Free', NULL);
+INSERT INTO `room` (`id`, `type`, `occupied`, `floor`, `number_room`) VALUES
+(1, 'single room', 0, '2', 201),
+(2, 'doble room', 0, '3', 301),
+(3, 'matrimonial room', 0, '3', 302),
+(4, 'doble room', 0, '2', 202),
+(5, 'single room', 0, '2', 203),
+(6, 'matrimonial room', 0, '4', 401),
+(7, 'doble room', 0, '4', 402),
+(8, 'single room', 0, '2', 204),
+(9, 'doble room', 0, '2', 205),
+(10, 'doble room', 0, '3', 303),
+(11, 'single room', 0, '3', 304);
 
 -- --------------------------------------------------------
 
@@ -213,26 +212,32 @@ ALTER TABLE `roombook`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `newsletterlog`
 --
 ALTER TABLE `newsletterlog`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT de la tabla `roombook`
 --
 ALTER TABLE `roombook`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
