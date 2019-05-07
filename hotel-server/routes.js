@@ -2,14 +2,14 @@
 
 const express = require('express')
 const router = express.Router()
-
+const db = require('hotel-db')
 
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
 
 router.get('/req1', (req, res) => {
-  connection.query('SELECT * FROM room ', (err,result) => {
+  db.query('SELECT * FROM room ', (err,result) => {
 
 
     res.render('pages/req1',{
@@ -29,8 +29,8 @@ router.get('/req3', (req, res) => {
   res.render('pages/req3')
 })
 
-router.get('/req4', (req, res) => {
-  db.query('SELECT * FROM roombook',(err,result) => {
+router.get('/req4', async (req, res) => {
+  await db.query('SELECT * FROM roombook',(err,result) => {
     res.render('pages/req4',{
       data : result
     });
