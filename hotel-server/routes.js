@@ -2,13 +2,6 @@
 
 const express = require('express')
 const router = express.Router()
-
-const dbConnection = require('../hotel-db/index.js');
-
-const connection = dbConnection;
-const bodyParser = require('body-parser');
-
-router.use(bodyParser());
 const db = require('hotel-db')
 
 router.get('/', (req, res) => {
@@ -16,7 +9,13 @@ router.get('/', (req, res) => {
 })
 
 router.get('/req1', (req, res) => {
-  res.render('pages/req1')
+  db.query('SELECT * FROM room ', (err,result) => {
+
+
+    res.render('pages/req1',{
+      data : result
+    })
+  })
 })
 
 router.get('/req2', async (req, res) => {
@@ -30,8 +29,8 @@ router.get('/req3', (req, res) => {
   res.render('pages/req3')
 })
 
-router.get('/req4', (req, res) => {
-  connection.query('SELECT * FROM roombook',(err,result) => {
+router.get('/req4', async (req, res) => {
+  await db.query('SELECT * FROM roombook',(err,result) => {
     res.render('pages/req4',{
       data : result
     });
@@ -40,7 +39,7 @@ router.get('/req4', (req, res) => {
 
 router.post ('/req4', (req, res) => {
   const { id, TRoom, nodays } = req.body
-  connection.query('SELECT * FROM roombook WHERE ? AND ? AND ?',
+  db.query('SELECT * FROM roombook WHERE ? AND ? AND ?',
   [{id}, {TRoom}, {nodays}], (err, result) => {
     res.render('pages/req4', {
       data : result

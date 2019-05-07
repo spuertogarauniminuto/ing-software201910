@@ -1,9 +1,10 @@
 'use strict'
 
 const express = require('express')
-const app = express()
+const app = express();
 const routes = require('./routes')
 const path = require('path')
+const bodyParser = require('body-parser');
 
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
@@ -25,6 +26,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
+app.use(bodyParser.urlencoded({ extended : false}))
 
 const port = process.env.PORT || 3000
 app.listen(port, (err) => {

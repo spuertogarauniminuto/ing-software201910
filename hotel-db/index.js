@@ -1,6 +1,7 @@
+
 'use strict'
 
-const mysql = require('../hotel-server/node_modules/mysql')
+const mysql = require('mysql')
 const config = require('./config')
 
 const connection = mysql.createConnection(config)
