@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const routes = require('./routes')
 const path = require('path')
+
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
@@ -24,6 +25,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
 const port = process.env.PORT || 3000
 app.listen(port, (err) => {
   if (err) throw err

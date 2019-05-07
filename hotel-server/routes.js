@@ -2,7 +2,15 @@
 
 const express = require('express')
 const router = express.Router()
+
+const dbConnection = require('../hotel-db/index.js');
+
+const connection = dbConnection;
+const bodyParser = require('body-parser');
+
+router.use(bodyParser());
 const db = require('hotel-db')
+
 router.get('/', (req, res) => {
   res.render('pages/index')
 })
@@ -23,8 +31,22 @@ router.get('/req3', (req, res) => {
 })
 
 router.get('/req4', (req, res) => {
-  res.render('pages/req4')
-})
+  connection.query('SELECT * FROM roombook',(err,result) => {
+    res.render('pages/req4',{
+      data : result
+    });
+  });
+});
+
+router.post ('/req4', (req, res) => {
+  const { id, TRoom, nodays } = req.body
+  connection.query('SELECT * FROM roombook WHERE ? AND ? AND ?',
+  [{id}, {TRoom}, {nodays}], (err, result) => {
+    res.render('pages/req4', {
+      data : result
+    });
+  });
+});
 
 router.get('/req5', (req, res) => {
   res.render('pages/req5')
@@ -76,4 +98,5 @@ router.get('/req15', (req, res) => {
 router.get('/req16', (req, res) => {
   res.render('pages/req16')
 })
+
 module.exports = router
