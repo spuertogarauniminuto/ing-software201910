@@ -29,31 +29,65 @@
             <div class="col-md-6 text-center">
               <h1>Preguntar Por Descuento</h1>
 
-                  <form>
+                  <form action="http://localhost:3000/req3" method="post">
                     <br></br>
 
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Nombre Del Usuario</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese nombre del usuario">
+                      <label for="nombre">Nombre Del Usuario</label>
+                      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingrese nombre del usuario">
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Número De Identificación Del Usuario</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese el número de identificación del usuario">
-                    </div>
+                      <label for="identificacion">Número De Identificación Del Usuario</label>
+                      <input type="text" class="form-control" id="identificacion" placeholder="Ingrese el número de identificación del usuario">
+
+
+                      <div class="form-group">
+                        <label for="costo">Costo habitación</label>
+                        <input type="text" class="form-control" id="costo" placeholder="Ej: 10000">
+
+                        </div>
+
                       <br></br>
                     <button type="submit" class="btn btn-warning">Buscar</button>
+                    <button type="reset" class="btn btn-warning">Limpiar Campos</button>
                   </form>
 
             </div>
 
             <div class="col-md-6">
               <img src="/img/imgDescuento.jpg" alt="imagen" class="img-fluid">
+
             </div>
 
           </div>
         </div>
       </div>
     </header>
+
+    <br>
+        <center>
+        <div class="col-md-10 text-center">
+            <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Nombre Del Usuario</th>
+                      <th scope="col">Número De Identificación Del Usuario</th>
+                      <th scope="col">Costo Habitación</th>
+                      <th scope="col">Porcentaje Descuento</th>
+                    </tr>
+                    <% for(var i=0; i < data.length; i++){ %>
+                      <tr>
+                        <td><%= data[i].nombre %></td>
+                        <td><%= data[i].identificacion %></td>
+                        <td><%= data[i].costo %></td>
+                        <td><%= data[i].34 / costo * 100 %></td
+                      </tr>
+                  <% }%>
+                </thead>
+            </table>
+        </div>
+        </center>
 
     <!-- Pie de pagina -->
     <%include ../partials/footer%>

@@ -19,8 +19,21 @@ router.get('/req2', async (req, res) => {
 })
 
 router.get('/req3', (req, res) => {
-  res.render('pages/req3')
-})
+  connection.query('SELECT * FROM room',(err,result) => {
+     res.render('pages/req3',{
+       data : result
+     });
+   });
+ });
+
+ router.post ('/req3', (req, res) => {
+   const { nombre, identificacion, costo } = req.body
+   connection.query('SELECT * FROM room',[{nombre}, {identificacion}, {costo}], (err, result) => {
+     res.render('pages/req3', {
+       data : result
+     });
+   });
+ });
 
 router.get('/req4', (req, res) => {
   res.render('pages/req4')
