@@ -11,45 +11,60 @@
     <!--Bootstrap 4 -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-req6.css">
     <!-- Custom CSS -->
 
-    <title></title>
+    <title>Software Hotel</title>
   </head>
   <body>
 
     <!--Navegación-->
     <%include ../partials/header%>
 
-      <header class="cabecera-principal">
-        <div class="background text-white py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 text-center">
-                <h1>Buscar precio total</h1>
+    <header class="cabecera-principal">
+      <div class="background text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <h1>Reservacion de Habitaciones</h1>
 
-                  <form>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput">Número de identificación</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2">Tipo de habitació</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2">Número de noches</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-                    </div>
-
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                  </form>
-
-              </div>
             </div>
+
+            <div class="col-md-6">
+              <img src="img/imgPrueba.png" alt="imagen" class="img-fluid">
+            </div>
+
+
+
           </div>
         </div>
-    </header>
+      </div>
+  </header>
+  <div class="form-registro">
+    <br><h3>Reservacion de la habitacion</h3><br>
+    <back>
+      <form method="POST" action="nuevareserva">
+        <div class="contenedor-inputs">
+        <input type="text" id="text" name="nombre" placeholder="Nombre"class="input-100" required>
+        <input type="text" id="text" name="Identificacion" placeholder="Numero de Identificacion"class="input-100" required >
+        <input type="text" id="text" name="Habitacion" placeholder="Numero Habitacion"class="input-100" required>
+         <h4 class="input-48">Datos extras</h4>
+        <input type="text" id="text" name="Personas" placeholder="Numero de personas"class="input-100" required>
+        <input type="text" id="text" name="Entrada" placeholder="Fecha de entrada"class="input-100" required>
+        <input type="text" id="text" name="Salida" placeholder="Fecha de salida"class="input-100" required>
+        <input type="text" id="text" name="Dias" placeholder="Numero de dias"class="input-100" required>
+        Mascota<input type="radio" name="mascota" value="1">Si <input type="radio" name="mascota" value="2"> No
+         <h4 class="input-48">Servicios extras</h4>
+        Gimnasio<input type="checkbox" name="extras" value="1">
+        Piscina<input type="checkbox" name="extras" value="2">
+        <br>
+        <input type="submit" value ="Reservar" id="submit" name="submit" class="enviar" required/>
+        </div>
+      </form>
+    </back>
+  </div>
+
+  <% include ../partials/footer%>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

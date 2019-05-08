@@ -1,0 +1,97 @@
+ .cabecera-principal {
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar{
+  box-shadow: 2px 2px 5px #000;
+}
+h1{
+	font-family:Comic Sans MS;
+  font-size:50px; 
+	text-align:center;
+}
+h4{
+    font-family:Comic Sans MS;
+    font-size:20px;
+    color:#000000;
+    text-align: center;
+}
+
+
+.form-registro{
+	width: 95%;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 7px;
+}
+
+.contenedor-inputs{
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+input{
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+}
+
+
+.input-100{
+  width: 100%;
+}
+
+#text {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #000000;
+    background: #fff;
+    border-radius: 6px 6px 6px 6px;
+}
+
+#text:hover {
+    background: #75ACEC ;
+}
+
+#back {
+	background: #eee;
+	font-weight: bold;
+	color:#eee;
+}
+
+#submit {
+    font-weight: bold;
+    font-size:18px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 0 10px 20px 0;
+    border: 1.5px solid #ccc;
+    background: #fff;
+    border-radius: 8px 8px 8px 8px;
+}
+
+#submit:hover {
+    background: #75ACEC ;
+}
+
+#box {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5px;
+    margin: 0 5px 5px 0;
+    border: 0.5px solid #ccc;
+    background: #eee;
+    border-radius: 6px 6px 6px 6px;
+}
+
+#box:hover {
+    background: #fff;
+}
