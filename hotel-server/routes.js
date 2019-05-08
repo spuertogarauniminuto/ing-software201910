@@ -9,11 +9,9 @@ router.get('/', (req, res) => {
 })
 
 router.get('/req1', (req, res) => {
-  db.query('SELECT * FROM room ', (err,result) => {
-
-
-    res.render('pages/req1',{
-      data : result
+  db.query('SELECT * FROM room ', (err, result) => {
+    res.render('pages/req1', {
+      data: result
     })
   })
 })
@@ -21,7 +19,7 @@ router.get('/req1', (req, res) => {
 router.get('/req2', async (req, res) => {
   await db.query({ sql: 'SELECT * FROM room WHERE room.type = ?', values: [req.query.type] }, (error, results, fields) => {
     if (error) throw error
-    res.render('pages/req2', {rooms: results})
+    res.render('pages/req2', { rooms: results })
   })
 })
 
@@ -30,22 +28,22 @@ router.get('/req3', (req, res) => {
 })
 
 router.get('/req4', async (req, res) => {
-  await db.query('SELECT * FROM roombook',(err,result) => {
-    res.render('pages/req4',{
-      data : result
-    });
-  });
-});
+  await db.query('SELECT * FROM roombook', (err, result) => {
+    res.render('pages/req4', {
+      data: result
+    })
+  })
+})
 
-router.post ('/req4', (req, res) => {
+router.post('/req4', (req, res) => {
   const { id, TRoom, nodays } = req.body
   db.query('SELECT * FROM roombook WHERE ? AND ? AND ?',
-  [{id}, {TRoom}, {nodays}], (err, result) => {
-    res.render('pages/req4', {
-      data : result
-    });
-  });
-});
+    [{ id }, { TRoom }, { nodays }], (err, result) => {
+      res.render('pages/req4', {
+        data: result
+      })
+    })
+})
 
 router.get('/req5', (req, res) => {
   res.render('pages/req5')
@@ -74,8 +72,25 @@ router.get('/req10', (req, res) => {
   res.render('pages/req10')
 })
 
-router.get('/req11', (req, res) => {
-  res.render('pages/req11')
+router.get('/req11', async (req, res) => {
+  await db.query('SELECT * FROM room', (error, results, fields) => {
+    if (error) throw error
+    res.render('pages/req11', { rooms: results })
+  })
+})
+
+router.post('/req11', async (req, res) => {
+  let message
+  await db.query('INSERT INTO `room_prices` (`id`, `id_room`, `price`) VALUES (NULL, ? , ?)',[req.body.form, req.body.price] , (error, result) => {
+    if (error) {
+      message = 'Error: No se ha podido registrar'
+    }
+  })
+  await db.query('SELECT * FROM room', (error, results, fields) => {
+    if (error) throw error
+    message = 'Se ha registrado correctamente'
+    res.render('pages/req11', { rooms: results, message: message })
+  })
 })
 
 router.get('/req12', (req, res) => {
