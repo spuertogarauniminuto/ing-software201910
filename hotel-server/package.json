@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/spuertogarauniminuto/ing-software201910#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mysql": "^2.17.1",
     "express-session": "^1.16.1",
     "hotel-db": "file:../hotel-db"
